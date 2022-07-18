@@ -1,0 +1,48 @@
+##### hydra
+hydra:
+    run:
+      dir: ./outputs/${exp_name}/${status}/${now:%Y-%m-%d}_${now:%H-%M-%S}
+    sweep:
+      dir: ./outputs/${exp_name}/${status}/${now:%Y-%m-%d}_${now:%H-%M-%S}
+      subdir: ${hydra.job.override_dirname}
+
+##### dir
+exp_name: code_dev/infwide        # experiment name
+status: train                     # run status: train|debug
+resume:                           # resuming checkpoint path (${hydra:runtime.cwd}/ )
+checkpoint_dir: checkpoints/      # models saving dir (relative to $dir)
+final_test_dir: final_test/       # final test result saving dir (relative to $dir)
+log_dir: events/                  # log file save dir (relative to $dir)
+# outputs_dir: 
+
+##### run
+gpus: [0]                      # GPU used, [0,1] | empty (all gpu)
+num_workers: 8                 # number of cpu workers
+trainer_name: infwide_trainer  # trainer name
+trainer:
+  epochs: 400                  # 400/4000 for 5k/500 dataset images | maximal training epochs
+  limit_train_batches:         # maximal trainning batches: empty for all
+  limit_val_batches:           # maximal validation batches: empty for all
+  monitor: min loss/valid      # monitor for early stop: max calc_psnr/valid | min loss/valid
+  saving_top_k: 5              # save top k checkpoints (best checkpoints saved separately)
+  early_stop: 100              # stop if no improvement in consecutive $early_stop epoches, 10
+  logging_step: 500            # 200/2000 for 5k/500 dataset images | one log / $logging_step iteration
+  tensorboard: true            # use tensorboard for training log
+  final_test: False            # do test after the training
+  assigned_valid: False        # use assigned validation set
+
+
+##### metrics
+metrics:
+  - _target_: srcs.metric._metric.calc_psnr
+  - _target_: srcs.metric._metric.calc_ssim
+
+##### data&nets
+defaults:
+  - data: [infwide_train_data] # [infwide_train_data,infwide_test_data,infwide_valid_data] | 
+  - network: infwide           # network config
+  - hparams: infwide_hyparams
+  
+  - override hydra/job_logging : custom # custom || colorlog
+  - override hydra/hydra_logging: colorlog
+  - _self_

@@ -1,0 +1,20 @@
+# @package data_loader
+_target_: srcs.data_loader.infwide_data_loaders.get_data_loaders
+# img_dir: ['/ssd/2/zzh/dataset/NightShot/train_LR/'] # training dataset
+# img_dir: ['/ssd/2/zzh/dataset/DIV2K_train_HR/']
+img_dir: ${hydra:runtime.cwd}/dataset/train_data/Kodak24/ # image | for debug
+
+batch_size: ${batch_size}
+patch_size: ${patch_size}
+tform_op: 'all' # 'flip' | 'rotate' | 'reverse' 
+noise_type: 'camera' # 'gaussian' | 'camera'
+# noise_params: {'sigma': 0.05} # for gaussian
+noise_params: {'sigma_beta': [0.01, 0.03], 'sigma_r': [0.5, 4], 'nd_factor': [2, 8], 'kc': [4,16]} # for camera,exp
+motion_len: [13,35] # motion kernel length
+status: 'train'
+shuffle: true
+num_workers: ${num_workers}
+validation_split: 0.05
+pin_memory: False
+prefetch_factor: 2
+all2CPU: True

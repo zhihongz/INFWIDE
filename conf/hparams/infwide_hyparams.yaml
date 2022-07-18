@@ -1,0 +1,8 @@
+# @package _global_
+batch_size: 8
+patch_size: 256
+learning_rate: 0.0002
+weight_decay: 0
+scheduler_step_size: 50 # 50/20 for 5k/500 dataset images
+scheduler_gamma: 0.5 # 0.5/0.8 for 5k/500 dataset images
+input_denoise_epoch: # optimizing epoches of input denoise module

@@ -1,0 +1,11 @@
+torch>=1.1
+torchvision
+numpy
+hydra-core>=1.0.3
+hydra_colorlog
+omegaconf
+tqdm
+tensorboard>=1.14
+matplotlib
+opencv
+scikit-image

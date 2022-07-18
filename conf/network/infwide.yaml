@@ -1,0 +1,26 @@
+# @package _global_
+network_name: infwide
+arch:
+  _target_: srcs.model.infwide_model.infwide
+  n_colors: 3
+  input_denoise: ResUnet 
+
+loss: {'main_loss':1, 'input_denoise_loss':0.5, 'forward_conv_loss':0.5} # main_loss, input_denoise_loss, forward_conv_loss
+main_loss:
+  _target_: srcs.loss._loss_common.weighted_loss
+  loss_weights_dict: {'l1_loss':0.4, 'mse_loss':0.2, 'ssim_loss':0.2, 'tv_loss':0.2}
+input_denoise_loss:
+  _target_: srcs.loss._loss_common.weighted_loss
+  loss_weights_dict: {'l1_loss':0.5, 'mse_loss':0.3, 'tv_loss':0.2}
+forward_conv_loss:
+  _target_: srcs.loss._loss_common.l1_loss
+
+optimizer:
+  _target_: torch.optim.Adam
+  lr: ${learning_rate}
+  weight_decay: ${weight_decay}
+  amsgrad: true
+lr_scheduler:
+  _target_: torch.optim.lr_scheduler.StepLR
+  step_size: ${scheduler_step_size}
+  gamma: ${scheduler_gamma}

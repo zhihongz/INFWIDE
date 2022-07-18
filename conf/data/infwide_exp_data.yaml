@@ -1,0 +1,21 @@
+# @package test_data_loader
+_target_: srcs.data_loader.infwide_data_loaders.get_data_loaders
+# simuexp
+img_dir: ${hydra:runtime.cwd}/dataset/benchmark/simu_data/NightShot_exp/gt/ # sharp image
+load_blur_image_dir: ${hydra:runtime.cwd}/dataset/benchmark/simu_data/NightShot_exp/blur_kc8 # blurry
+load_psf_dir: ${hydra:runtime.cwd}/dataset/benchmark/simu_data/NightShot_exp/kernel # kernel
+# img_dir:  ${hydra:runtime.cwd}/dataset/benchmark/simu_data/Hu_dataset_exp/gt # sharp image
+# load_blur_image_dir:  ${hydra:runtime.cwd}/dataset/benchmark/simu_data/Hu_dataset_exp/blur_kc4 # blurry
+# load_psf_dir:  ${hydra:runtime.cwd}/dataset/benchmark/simu_data/Hu_dataset_exp/kernel # kernel
+
+# realexp
+# load_blur_image_dir: ${hydra:runtime.cwd}/dataset/benchmark/real_data/blur # blurry
+# load_psf_dir: ${hydra:runtime.cwd}/dataset/benchmark/real_data/kernel # kernel
+
+batch_size: 1
+patch_size:
+status: ${status} # simuexp, realexp
+shuffle: False
+num_workers: ${num_workers}
+pin_memory: True
+prefetch_factor: 4
