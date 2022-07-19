@@ -47,12 +47,13 @@ scikit-image
 ## Citation
 
 ```
-@article{zhihongzhangINFWIDEImage,
-
- title = {{{INFWIDE}}: {{Image}} and {{Feature Space Wiener Deconvolution Network}} for {{Non-blind Image Deblurring}} in {{Low-Light Conditions}}},
-
- author = {{Zhihong Zhang} and {Yuxiao Cheng} and {Jinli Suo} and {Liheng Bian} and {Qionghai Dai}}
-
+@misc{zhang2022infwide,
+      title={INFWIDE: Image and Feature Space Wiener Deconvolution Network for Non-blind Image Deblurring in Low-Light Conditions}, 
+      author={Zhihong Zhang and Yuxiao Cheng and Jinli Suo and Liheng Bian and Qionghai Dai},
+      year={2022},
+      eprint={2207.08201},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
