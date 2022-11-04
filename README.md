@@ -8,7 +8,7 @@
 
 Blur, noise, and saturation are three major challenges for night photography. Although existing deblurring algorithms have shown promising performance on well-exposed blurry images, they still have difficulty in coping with low-light snapshots due to the sophisticated noise and saturation issue in low-light conditions.
 
-![INFWIDE's architecture](./model_zoo/infwide/infwide.png)
+![INFWIDE's architecture](./demo/infwide.png)
 
 In this work, we propose a novel non-blind deblurring method dubbed image and feature space Wiener deconvolution network (INFWIDE) to tackle these problems systematically. INFWIDE proposes a two-branch architecture, which explicitly removes noise and hallucinates saturated regions in the image space and suppresses ringing artifacts in the feature space, and integrates the two complementary outputs with a subtle multi-scale fusion network for high quality night photograph deblurring. For effective network training, we design a set of loss functions integrating a forward imaging model and backward reconstruction to form a close-loop regularization to secure good convergence of the deep neural network. Further, to optimize INFWIDE’s applicability in real low-light conditions, a physical-process-based low-light noise model is employed to synthesize realistic noisy night photographs for model training. Taking advantage of the traditional Wiener deconvolution algorithm’s physically driven characteristics and arisen deep neural network’s representation ability, INFWIDE can recover fine details while suppressing the unpleasant artifacts during deblurring.
 
