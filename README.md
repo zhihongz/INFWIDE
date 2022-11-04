@@ -24,7 +24,7 @@ Dataset link: https://pan.baidu.com/s/1N_yLVDzCEktVkvkqeoduKQ?pwd=0000
 
 ## Demo
 
-| <img src="./demo/simu_res.gif" height=400 /> | <img src="./demo/real_res.gif" height=400 /> |
+| <img src="./demo/simu_res.gif" height=300 /> | <img src="./demo/real_res.gif" height=300 /> |
 | :------------------------------------------: | -------------------------------------------- |
 |            Simulation experiment             | Real-data experiment                         |
 
