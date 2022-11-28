@@ -31,7 +31,7 @@ metrics:
 
 ##### data&nets
 defaults:
-  - data: infwide_exp_data      # infwide_test_data | infwide_exp_data
+  - data: infwide_test_data
   - override hydra/job_logging : custom # custom | colorlog
   - override hydra/hydra_logging: colorlog
   - _self_

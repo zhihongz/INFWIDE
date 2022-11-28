@@ -18,7 +18,7 @@ To faciliate the development of low-light deblurring neural networks, we extend 
 
 > L. Chen, J. Zhang, J. Pan, S. Lin, F. Fang, and J. S. Ren, “Learning a non-blind deblurring network for night blurry images,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2021, pp. 10 542–10 550.
 
-Dataset link: https://pan.baidu.com/s/1N_yLVDzCEktVkvkqeoduKQ?pwd=0000
+**Dataset link**: [BaiduDisk](https://pan.baidu.com/s/1N_yLVDzCEktVkvkqeoduKQ?pwd=0000) | [GoogleDrive](https://drive.google.com/file/d/1woLLJU1RxsXehXOZpCRTX-1ep8IxIbTP/view?usp=sharing)
 
 
 
@@ -50,7 +50,7 @@ scikit-image
 
 1. configurate your conda environment according to the requirements above.
 
-2. download the pretrained model from [this link](https://pan.baidu.com/s/1N_yLVDzCEktVkvkqeoduKQ?pwd=0000), and put it into './model_zoo/infwide/'.
+2. download the pretrained model from [BaiduDisk](https://pan.baidu.com/s/1N_yLVDzCEktVkvkqeoduKQ?pwd=0000) | [GoogleDrive](https://drive.google.com/file/d/16MtdiYi5MWOG2UmGvUNR228xfXfJLoTT/view?usp=sharing), and put it into './model_zoo/infwide/'.
 
 3. run `python test.py`
 
