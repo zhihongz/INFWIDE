@@ -2,7 +2,7 @@
 
 [This repository](https://github.com/zhihongz/INFWIDE) contains the PyTorch code for our paper "INFWIDE: Image and Feature Space Wiener Deconvolution Network for Non-blind Image Deblurring in Low-Light Conditions" by [Zhihong Zhang](https://zhihongz.github.io/), Yuxiao Cheng, Jinli Suo, Liheng Bian, and Qionghai Dai.
 
-> [paper]() | [arxiv](https://arxiv.org/abs/2207.08201)
+> [paper](https://ieeexplore.ieee.org/document/10047966) | [arxiv](https://arxiv.org/abs/2207.08201)
 
 ## INFWIDE
 
@@ -57,14 +57,15 @@ scikit-image
 ## Citation
 
 ```
-@misc{zhang2022infwide,
-      title={INFWIDE: Image and Feature Space Wiener Deconvolution Network for Non-blind Image Deblurring in Low-Light Conditions}, 
-      author={Zhihong Zhang and Yuxiao Cheng and Jinli Suo and Liheng Bian and Qionghai Dai},
-      year={2022},
-      eprint={2207.08201},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+@ARTICLE{infwide_zhihong,
+  author={Zhang, Zhihong and Cheng, Yuxiao and Suo, Jinli and Bian, Liheng and Dai, Qionghai},
+  journal={IEEE Transactions on Image Processing},
+  title={INFWIDE: Image and Feature Space Wiener Deconvolution Network for Non-blind Image Deblurring in Low-Light Conditions},
+  year={2023},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TIP.2023.3244417}}
 ```
 
 ## Acknowledgement

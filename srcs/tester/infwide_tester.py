@@ -112,10 +112,10 @@ def test(test_data_loader, model,  device, criterion, metrics, config):
                 #     kernel_img, f'{config.outputs_dir}test{i+1:03d}_{k+1:03d}_kernel.png')
                 imsave(
                     out_img, f'{config.outputs_dir}test{i+1:03d}_{k+1:03d}_output.png')
-                # imsave(
-                #     gt_img, f'{config.outputs_dir}test{i+1:03d}_{k+1:03d}_gt.png')
                 imsave(
-                    data_denoise_img, f'{config.outputs_dir}test{i+1:03d}_{k+1:03d}_data-denoise.png')
+                    gt_img, f'{config.outputs_dir}test{i+1:03d}_{k+1:03d}_gt.png')
+                # imsave(
+                #     data_denoise_img, f'{config.outputs_dir}test{i+1:03d}_{k+1:03d}_data-denoise.png')
                 break  # save one image per batch
 
             # computing loss, metrics on test set
