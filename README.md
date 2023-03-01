@@ -62,9 +62,8 @@ scikit-image
   journal={IEEE Transactions on Image Processing},
   title={INFWIDE: Image and Feature Space Wiener Deconvolution Network for Non-blind Image Deblurring in Low-Light Conditions},
   year={2023},
-  volume={},
-  number={},
-  pages={1-1},
+  volume={32},
+  pages={1390--1402},
   doi={10.1109/TIP.2023.3244417}}
 ```
 
